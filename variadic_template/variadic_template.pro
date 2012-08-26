@@ -8,5 +8,5 @@ SOURCES += \
     test.cpp
 
 HEADERS += \
-    fold_right.h
+    foldr.h
 

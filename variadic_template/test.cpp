@@ -1,4 +1,4 @@
-#include "fold_right.h"
+#include "foldr.h"
 
 #include <iostream>
 
@@ -17,14 +17,14 @@ accumulate
 template<int init, class...list> struct
 sum
 {
-    static const int value = fold_right<accumulate, init, list...>::value;
+    static const int value = foldr<accumulate, init, list...>::value;
 };
 
 using namespace std;
 
 int main()
 {
-    cout << fold_right<accumulate, 0, integer<1>, integer<2>, integer<3>, integer<4>, integer<5> >::value << endl;
+    cout << sum<0, integer<1>, integer<2>, integer<3>, integer<4>, integer<5> >::value << endl;
 
     return 0;
 }
