@@ -2,12 +2,6 @@
 
 #include <iostream>
 
-template<int i> struct
-integer
-{
-    static const int value = i;
-};
-
 template<class t, int i> struct
 accumulate
 {
@@ -18,6 +12,12 @@ template<int init, class...list> struct
 sum
 {
     static const int value = foldr<accumulate, init, list...>::value;
+};
+
+template<int i> struct
+integer
+{
+    static const int value = i;
 };
 
 using namespace std;
