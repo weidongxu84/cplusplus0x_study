@@ -8,5 +8,5 @@ SOURCES += \
     test.cpp
 
 HEADERS += \
-    foldr.h
+    foldl.h
 

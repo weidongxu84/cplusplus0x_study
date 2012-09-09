@@ -1,4 +1,4 @@
-#include "foldr.h"
+#include "foldl.h"
 
 #include <iostream>
 
@@ -11,7 +11,7 @@ accumulate
 template<int init, class...list> struct
 sum
 {
-    static const int value = foldr<accumulate, init, list...>::value;
+    static const int value = foldl<accumulate, init, list...>::value;
 };
 
 template<int i> struct
@@ -19,6 +19,7 @@ integer
 {
     static const int value = i;
 };
+
 
 using namespace std;
 
